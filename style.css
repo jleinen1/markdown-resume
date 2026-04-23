@@ -3,7 +3,103 @@
 
 /* Print Styling */
 @media print {
+  @page {
+    size: letter;
+    margin: 0.75in;
+  }
 
+  body {
+    font-family: "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #2a2e28;
+    background: #f7f8f4;
+  }
+
+  /* name */
+  h1 {
+    font-size: 26pt;
+    font-weight: normal;
+    letter-spacing: 0.12em;
+    color: #3d5244;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+  }
+
+  /* section headers */
+  h2 {
+    font-size: 11pt;
+    font-weight: normal;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #5a7a62;
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+    padding-bottom: 4pt;
+    border-bottom: 0.5pt solid #a8c0aa;
+    page-break-after: avoid;
+  }
+
+  /* job/school titles */
+  h3 {
+    font-size: 12pt;
+    font-weight: normal;
+    font-style: italic;
+    color: #3d5244;
+    margin-top: 10pt;
+    margin-bottom: 3pt;
+    page-break-after: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+    color: #2a2e28;
+  }
+
+  li {
+    margin-bottom: 3pt;
+  }
+
+  ul {
+    padding-left: 14pt;
+  }
+
+  strong {
+    font-weight: bold;
+    color: #3d5244;
+  }
+
+  em {
+    font-style: italic;
+    color: #6b8c72;
+  }
+
+  hr {
+    border: none;
+    border-top: 0.5pt solid #a8c0aa;
+    margin: 10pt 0;
+  }
+
+  a {
+    color: #5a7a62;
+    text-decoration: none;
+  }
+
+  a[href^="http"]:after,
+  a[href^="https"]:after {
+    content: " (" attr(href) ")";
+    font-size: 8.5pt;
+    color: #7a9e82;
+  }
+
+  a[href^="mailto"]:after {
+    content: " (" attr(href) ")";
+    font-size: 8.5pt;
+    color: #7a9e82;
+  }
+}
     
 
 }
